@@ -20,8 +20,8 @@ resource "azurerm_cognitive_account" "this" {
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
   metrics_advisor_website_name                 = var.metrics_advisor_website_name
   outbound_network_access_restricted           = var.outbound_network_access_restricted
-  public_network_access_enabled                = var.public_network_access_enabled
   qna_runtime_endpoint                         = var.qna_runtime_endpoint
+  public_network_access_enabled                = var.public_network_access_enabled
   name                                         = var.name
   tags                                         = var.tags
 
