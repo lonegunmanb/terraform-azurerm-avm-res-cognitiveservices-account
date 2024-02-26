@@ -7,7 +7,6 @@ resource "random_string" "default_custom_subdomain_name_suffix" {
 resource "azurerm_cognitive_account" "this" {
   kind                                         = var.kind
   location                                     = var.location
-  name                                         = var.name
   resource_group_name                          = var.resource_group_name
   sku_name                                     = var.sku_name
   custom_question_answering_search_service_id  = var.custom_question_answering_search_service_id
@@ -23,6 +22,7 @@ resource "azurerm_cognitive_account" "this" {
   outbound_network_access_restricted           = var.outbound_network_access_restricted
   public_network_access_enabled                = var.public_network_access_enabled
   qna_runtime_endpoint                         = var.qna_runtime_endpoint
+  name                                         = var.name
   tags                                         = var.tags
 
   dynamic "identity" {
