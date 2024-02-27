@@ -5,8 +5,8 @@ resource "random_string" "default_custom_subdomain_name_suffix" {
 }
 
 resource "azurerm_cognitive_account" "this" {
-  kind                                         = var.kind
   location                                     = var.location
+  kind                                         = var.kind
   name                                         = var.name
   resource_group_name                          = var.resource_group_name
   sku_name                                     = var.sku_name
@@ -17,12 +17,12 @@ resource "azurerm_cognitive_account" "this" {
   fqdns                                        = var.fqdns
   local_auth_enabled                           = var.local_auth_enabled
   metrics_advisor_aad_client_id                = var.metrics_advisor_aad_client_id
-  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
   metrics_advisor_website_name                 = var.metrics_advisor_website_name
   outbound_network_access_restricted           = var.outbound_network_access_restricted
   public_network_access_enabled                = var.public_network_access_enabled
   qna_runtime_endpoint                         = var.qna_runtime_endpoint
+  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   tags                                         = var.tags
 
   dynamic "identity" {
