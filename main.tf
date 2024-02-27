@@ -22,8 +22,8 @@ resource "azurerm_cognitive_account" "this" {
   outbound_network_access_restricted           = var.outbound_network_access_restricted
   public_network_access_enabled                = var.public_network_access_enabled
   qna_runtime_endpoint                         = var.qna_runtime_endpoint
-  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   tags                                         = var.tags
+  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
 
   dynamic "identity" {
     for_each = (var.managed_identities.system_assigned || length(var.managed_identities.user_assigned_resource_ids) > 0) ? { this = var.managed_identities } : {}
