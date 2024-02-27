@@ -17,8 +17,8 @@ resource "azurerm_cognitive_account" "this" {
   dynamic_throttling_enabled                   = var.dynamic_throttling_enabled
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
   fqdns                                        = var.fqdns
-  metrics_advisor_aad_client_id                = var.metrics_advisor_aad_client_id
   metrics_advisor_website_name                 = var.metrics_advisor_website_name
+  metrics_advisor_aad_client_id                = var.metrics_advisor_aad_client_id
   outbound_network_access_restricted           = var.outbound_network_access_restricted
   public_network_access_enabled                = var.public_network_access_enabled
   qna_runtime_endpoint                         = var.qna_runtime_endpoint
