@@ -13,11 +13,11 @@ resource "azurerm_cognitive_account" "this" {
   custom_question_answering_search_service_id  = var.custom_question_answering_search_service_id
   custom_question_answering_search_service_key = var.custom_question_answering_search_service_key
   custom_subdomain_name                        = coalesce(var.custom_subdomain_name, "azure-cognitive-${random_string.default_custom_subdomain_name_suffix.result}")
-  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   dynamic_throttling_enabled                   = var.dynamic_throttling_enabled
   fqdns                                        = var.fqdns
   local_auth_enabled                           = var.local_auth_enabled
   metrics_advisor_aad_client_id                = var.metrics_advisor_aad_client_id
+  metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
   metrics_advisor_website_name                 = var.metrics_advisor_website_name
   outbound_network_access_restricted           = var.outbound_network_access_restricted
