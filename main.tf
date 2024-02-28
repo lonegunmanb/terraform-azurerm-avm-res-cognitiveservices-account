@@ -9,8 +9,8 @@ resource "azurerm_cognitive_account" "this" {
   location                                     = var.location
   name                                         = var.name
   resource_group_name                          = var.resource_group_name
-  sku_name                                     = var.sku_name
   custom_question_answering_search_service_id  = var.custom_question_answering_search_service_id
+  sku_name                                     = var.sku_name
   custom_question_answering_search_service_key = var.custom_question_answering_search_service_key
   custom_subdomain_name                        = coalesce(var.custom_subdomain_name, "azure-cognitive-${random_string.default_custom_subdomain_name_suffix.result}")
   dynamic_throttling_enabled                   = var.dynamic_throttling_enabled
