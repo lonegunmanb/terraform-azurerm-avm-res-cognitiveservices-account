@@ -10,8 +10,8 @@ resource "azurerm_cognitive_account" "this" {
   custom_question_answering_search_service_id  = var.custom_question_answering_search_service_id
   resource_group_name                          = var.resource_group_name
   name                                         = var.name
-  sku_name                                     = var.sku_name
   custom_subdomain_name                        = coalesce(var.custom_subdomain_name, "azure-cognitive-${random_string.default_custom_subdomain_name_suffix.result}")
+  sku_name                                     = var.sku_name
   custom_question_answering_search_service_key = var.custom_question_answering_search_service_key
   local_auth_enabled                           = var.local_auth_enabled
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
