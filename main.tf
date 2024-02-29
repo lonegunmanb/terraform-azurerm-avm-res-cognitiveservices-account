@@ -15,8 +15,8 @@ resource "azurerm_cognitive_account" "this" {
   custom_subdomain_name                        = coalesce(var.custom_subdomain_name, "azure-cognitive-${random_string.default_custom_subdomain_name_suffix.result}")
   dynamic_throttling_enabled                   = var.dynamic_throttling_enabled
   local_auth_enabled                           = var.local_auth_enabled
-  fqdns                                        = var.fqdns
   metrics_advisor_aad_client_id                = var.metrics_advisor_aad_client_id
+  fqdns                                        = var.fqdns
   metrics_advisor_aad_tenant_id                = var.metrics_advisor_aad_tenant_id
   metrics_advisor_super_user_name              = var.metrics_advisor_super_user_name
   metrics_advisor_website_name                 = var.metrics_advisor_website_name
